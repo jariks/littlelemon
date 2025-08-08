@@ -8,9 +8,10 @@ function App() {
     <div className="App">
       <Header/>
       <Main/>
-      <Footer/>
     </div>
   );
 }
 
 export default App;
+//      <Main/>
+//      <Footer/>
