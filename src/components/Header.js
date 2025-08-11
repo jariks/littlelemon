@@ -1,6 +1,6 @@
 import logo from '../assets/logo.svg';
 import {useState, useEffect} from 'react';
-
+import { Link } from 'react-router-dom'
 function Header() {
   const [open, setOpen] = useState(false);
 
@@ -19,9 +19,8 @@ function Header() {
         </button>
       {/* Desktop nav */}
       <div className='hidden sm:block space-x-8 text-xl ' aria-label='main'>
-        <a href='' className='hover:opacity-80'>Home</a>
-        <a href='' className='hover:opacity-80'>About</a>
-        <a href='' className='hover:opacity-80'>Menu</a>
+        <Link to='/' className='hover:opacity-80'>Home</Link>
+        <Link to='/reserve' className='hover:opacity-80'>Reservations</Link>
       </div>
     </nav>
     {/* Mobile menu */}
@@ -31,11 +30,9 @@ function Header() {
       </button>
       <nav className='flex flex-col min-h-screen items-center py-8' aria-label='mobile'>
         <hr className="border-solid border-1 border-black w-[80%]"/>
-        <a href='' className='w-full text-center py-6 hover:opacity-80' onClick={() => setOpen(false)}>Home</a>
+        <Link to='/' className='w-full text-center py-6 hover:opacity-80' onClick={() => setOpen(false)}>Home</Link>
         <hr className="border-solid border-1 border-black w-[80%]"/>
-        <a href='' className='w-full text-center py-6 hover:opacity-80' onClick={() => setOpen(false)}>About</a>
-        <hr className="border-solid border-1 border-black w-[80%]"/>
-        <a href='' className='w-full text-center py-6 hover:opacity-80' onClick={() => setOpen(false)}>Menu</a>
+        <Link to='/reserve' className='w-full text-center py-6 hover:opacity-80' onClick={() => setOpen(false)}>Reservation</Link>
         <hr className="border-solid border-1 border-black w-[80%]"/>
       </nav>
     </section>
